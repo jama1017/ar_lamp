@@ -30,21 +30,21 @@ function main() {
 
     console.log(datetime);
 
-    let currHrAngle = getCurrHourAngle(h),
-        currMinAngle = getCurrMinuteAngle(m),
+    let currHrAngle = getCurrHourAngle(h, m, s),
+        currMinAngle = getCurrMinuteAngle(m, s),
         currSecAngle = getCurrSecAngle(s)
 
     let initTL = new TimelineMax();
     initTL.set(hr_hand, {
-        rotation: getCurrHourAngle(h),
+        rotation: currHrAngle,
         transformOrigin:"bottom center"
     })
     .set(min_hand, {
-        rotation: getCurrMinuteAngle(m),
+        rotation: currMinAngle,
         transformOrigin:"bottom center"
     })
     .set(sec_hand, {
-        rotation: getCurrSecAngle(s),
+        rotation: currSecAngle,
         transformOrigin:"bottom center"
     });
 
@@ -68,17 +68,17 @@ function main() {
 
 }
 
-function getCurrHourAngle(currHour) {
+function getCurrHourAngle(currHour, currMinute, currSec) {
     if (currHour > 12) {
         currHour -= 12;
     } else if (currHour === 12) {
        currHour = 0;
     }
-    return currHour * 30;
+    return (currHour + currMinute/60 +currSec/3600) * 30;
 }
 
-function getCurrMinuteAngle(currMinute) {
-    return currMinute * 6;
+function getCurrMinuteAngle(currMinute, currSec) {
+    return (currMinute + currSec/60) * 6;
 }
 
 function getCurrSecAngle(currSec) {
