@@ -20,3 +20,14 @@ svg {
 #mainRow {
     margin: 0;
 }
+
+@media screen and (max-width: 767px) {
+    svg {
+        width: 80vw;
+        height: 40vh;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
