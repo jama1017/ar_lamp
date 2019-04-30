@@ -8,13 +8,13 @@
 
 $( document ).ready(function() {
     console.log("loading");
-    $('#clock-svg').load("./svg/clock.svg", main);
+    $('#clock-svg').load("./svg/clock.svg", clock_main);
     loadTodaysDate();
     setInterval(countdown, 30000);
+    // setInterval(test_toggle, 5000);
 });
 
-// main('lol');
-function main() {
+function clock_main() {
     console.log("loaded");
     let face = $('#clock_face'),
         hr_hand = $('#hour_hand'),
@@ -126,4 +126,8 @@ function countdown() {
     // mon - thurs 10 am - 7pm
     //fri - sat 10 am - 6pm
     //sun 1pm - 5pm
+}
+
+function test_toggle() {
+    $("#interface").toggleClass('d-none');
 }
