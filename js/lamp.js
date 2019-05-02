@@ -1,11 +1,3 @@
-// let select = function(s) {
-//   return document.querySelector(s);
-// };
-//
-// let selectAll = function(s) {
-//   return document.querySelectorAll(s);
-// };
-
 $( document ).ready(function() {
     console.log("loading");
     $('#clock-svg').load("./svg/clock.svg", clock_main);
@@ -113,11 +105,11 @@ function countdown() {
     } else if ((datetime.getDay() == 5) || (datetime.getDay() == 6)) {
         dateClose = new Date(2000, 0, 1, 6 + 12, 0); //fri and sat
     } else {
-        dateClose = new Date(2000, 0, 1, 11 + 12, 4); //mon - thurs
+        dateClose = new Date(2000, 0, 1, 7 + 12, 0); //mon - thurs
     }
     // console.log(dateClose)
 
-    let diff = Math.floor((dateClose - dateCurr) / (1000 * 60)); // in minutes
+    let diff = Math.round((dateClose - dateCurr) / (1000 * 60)); // in minutes
     if (diff > 0) {
         $('#countdown').html('The Library is closing in ' + diff + " minutes.");
     } else {

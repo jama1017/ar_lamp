@@ -7,9 +7,24 @@ body {
     padding: 0;
 }
 
-#interface {
+#interface, #books {
     width: 100vw;
     height: 100vh;
+}
+
+#books {
+    /* background-color: #; */
+}
+
+.carousel-inner img {margin: auto;}
+
+.carousel-indicators li {
+    background-color: #6b6b6b;
+}
+
+.carousel-inner {
+    /* background-color: red; */
+    min-height: 70vh;
 }
 
 svg {

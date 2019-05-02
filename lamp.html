@@ -22,7 +22,7 @@
 
     <body>
 
-        <section id="interface">
+        <section id="interface" class='d-none'>
             <div id="mainRow" class="row justify-content-center align-items-center h-100 w-100">
                 <div class="col-12 w-100 justify-content-center">
                     <div class="text-center">
@@ -30,6 +30,29 @@
                         <h1 id="todayIs">Today is </h1>
                         <div id="clock-svg"></div>
                         <h1 id="countdown"></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="books">
+            <div class="d-flex justify-content-around align-items-center h-100">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block" src="./img/bkg_1.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block" src="./img/bkg_2.jpg" alt="Second slide">
+                        </div>
+                        <!-- <div class="carousel-item">
+                            <img class="d-block h-100" src="./img/book_dublin.jpg" alt="Third slide">
+                        </div> -->
                     </div>
                 </div>
             </div>
