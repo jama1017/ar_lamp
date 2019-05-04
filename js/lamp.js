@@ -3,7 +3,6 @@ $( document ).ready(function() {
     $('#clock-svg').load("./svg/clock.svg", clock_main);
     loadTodaysDate();
     setInterval(countdown, 30000); //updates countdown
-    // setInterval(test_toggle, 5000);
 });
 
 function clock_main() {
@@ -89,6 +88,7 @@ function loadTodaysDate() {
 }
 
 function countdown() {
+    console.log("counting down");
     let datetime = new Date();
     let dateCurr = new Date(2000, 0, 1, datetime.getHours(), datetime.getMinutes());
     // console.log(datetime.getHours())
@@ -112,6 +112,10 @@ function countdown() {
     let diff = Math.round((dateClose - dateCurr) / (1000 * 60)); // in minutes
     if (diff > 0) {
         $('#countdown').html('The Library is closing in ' + diff + " minutes.");
+        if (diff <= 30) {
+            $('#books').css("z-index", -999);
+            $('#interface').css("z-index", 999);
+        }
     } else {
         $('#countdown').html('The Library is closed.');
     }
