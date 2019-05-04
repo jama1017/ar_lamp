@@ -2,7 +2,7 @@ $( document ).ready(function() {
     console.log("loading");
     $('#clock-svg').load("./svg/clock.svg", clock_main);
     loadTodaysDate();
-    setInterval(countdown, 30000);
+    setInterval(countdown, 30000); //updates countdown
     // setInterval(test_toggle, 5000);
 });
 
@@ -118,8 +118,4 @@ function countdown() {
     // mon - thurs 10 am - 7pm
     //fri - sat 10 am - 6pm
     //sun 1pm - 5pm
-}
-
-function test_toggle() {
-    $("#interface").toggleClass('d-none');
 }

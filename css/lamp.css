@@ -7,13 +7,13 @@ body {
     padding: 0;
 }
 
-#interface, #books {
+#interface, #books, #art {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-}
-
-#books {
-    /* background-color: #; */
+    background-color: white;
 }
 
 .carousel-inner img {margin: auto;}
@@ -23,8 +23,16 @@ body {
 }
 
 .carousel-inner {
-    /* background-color: red; */
     min-height: 70vh;
+}
+
+#book_carousel {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.5);
 }
 
 svg {
